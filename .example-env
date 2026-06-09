@@ -1,0 +1,49 @@
+NEXT_PUBLIC_APP_NAME = "Prostore"
+NEXT_PUBLIC_APP_DESCRIPTION = "A modern ecommerce store built with Next.js"
+NEXT_PUBLIC_SERVER_URL = "http://localhost:3000"
+
+DATABASE_URL=""
+
+NEXTAUTH_SECRET=""
+NEXTAUTH_URL=http://localhost:3000
+NEXTAUTH_URL_INTERNAL=http://localhost:3000
+
+# Key used to HMAC-hash user passwords (lib/encrypt.ts).
+# Must be set and kept consistent between seeding and sign-in.
+# Generate one with: openssl rand -base64 32
+ENCRYPTION_KEY=""
+
+PAYMENT_METHODS="PayPal, Stripe, CashOnDelivery"
+DEFAULT_PAYMENT_METHOD="PayPal"
+
+PAYPAL_API_URL="https://api-m.sandbox.paypal.com"
+PAYPAL_CLIENT_ID=""
+PAYPAL_APP_SECRET=""
+
+UPLOADTHING_TOKEN=''
+UPLOADTHING_SECRET=""
+UPLOADTHING_APPID=""
+
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=""
+STRIPE_SECRET_KEY=""
+# Signing secret for the Stripe webhook (app/api/webhooks/stripe/route.ts).
+# From the Stripe dashboard or `stripe listen` when testing locally.
+STRIPE_WEBHOOK_SECRET=""
+
+RESEND_API_KEY=""
+SENDER_EMAIL="onboarding@resend.dev"
+
+# Google OAuth credentials (optional — Google login is shown only when set).
+# Create at https://console.cloud.google.com -> APIs & Services -> Credentials
+# -> OAuth client ID (Web). Authorized redirect URI:
+#   http://localhost:3000/api/auth/callback/google   (local)
+#   https://<your-domain>/api/auth/callback/google   (production)
+GOOGLE_CLIENT_ID=""
+GOOGLE_CLIENT_SECRET=""
+
+# Secure admin account created by the seed script (db/seed.ts). If unset, the
+# seed falls back to the sample admin (admin@example.com / 123456) — set these
+# for any public/production deployment.
+ADMIN_NAME=""
+ADMIN_EMAIL=""
+ADMIN_PASSWORD=""
