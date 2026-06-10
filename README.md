@@ -48,10 +48,6 @@ npm install
 
 Copy the example file and fill in your values:
 
-```bash
-cp .example-env .env
-```
-
 | Variable | Required | Description |
 | --- | --- | --- |
 | `DATABASE_URL` | Yes | PostgreSQL connection string |
@@ -104,6 +100,3 @@ tests/          Jest tests
 
 ProStore is deployed on [Vercel](https://vercel.com). Set the environment variables above in the Vercel project settings, then deploy. The default payment method works out of the box; add PayPal/Stripe/Google/Resend keys to enable those integrations in production.
 
-## License
-
-This project is released under the MIT License.
