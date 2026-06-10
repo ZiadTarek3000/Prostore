@@ -1,5 +1,5 @@
-import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
+import { CheckCircle2, XCircle } from 'lucide-react';
 import { getProductBySlug } from '@/lib/actions/product.actions';
 import { notFound } from 'next/navigation';
 import ProductPrice from '@/components/shared/product/product-price';
@@ -62,12 +62,18 @@ const ProductDetailsPage = async (props: {
                     <ProductPrice value={Number(product.price)} />
                   </div>
                 </div>
-                <div className='mb-2 flex justify-between'>
+                <div className='mb-2 flex items-center justify-between'>
                   <div>Status</div>
                   {product.stock > 0 ? (
-                    <Badge variant='outline'>In Stock</Badge>
+                    <span className='inline-flex items-center gap-1.5 rounded-full border border-green-600/30 bg-green-600/10 px-3 py-1 text-xs font-semibold text-green-700 dark:text-green-400'>
+                      <CheckCircle2 className='size-3.5' />
+                      In Stock
+                    </span>
                   ) : (
-                    <Badge variant='destructive'>Out Of Stock</Badge>
+                    <span className='inline-flex items-center gap-1.5 rounded-full border border-destructive/30 bg-destructive/10 px-3 py-1 text-xs font-semibold text-destructive'>
+                      <XCircle className='size-3.5' />
+                      Out of Stock
+                    </span>
                   )}
                 </div>
                 {product.stock > 0 && (
